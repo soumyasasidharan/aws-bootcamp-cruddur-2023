@@ -35,7 +35,7 @@ aws --version
 # I tried in cloud shell in us east 1 region.
 
 ### image
-![proof of working aws cli](https://github.com/soumyasasidharan/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Screenshot%202023-02-19%20at%2012.16.25%20am.png)
+
 ## Homework challenge
 ### Created billing alarm using aws management console
 image

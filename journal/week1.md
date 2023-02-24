@@ -1,14 +1,19 @@
 # Week 1 — App Containerization
 
-##Containeraized backend
+## Containeraized backend
 #image
 cd backend-flask
+
 export FRONTEND_URL="*"
+
 export BACKEND_URL="*"
+
 python3 -m flask run --host=0.0.0.0 --port=4567
+
 cd ..
 
-##Added docker file in backend flask
+## Added docker file in backend flask
+
 Create a file here: backend-flask/Dockerfile
 
 FROM python:3.10-slim-buster
@@ -21,7 +26,7 @@ COPY requirements.txt requirements.txt
 #install the python libraries used for the app
 RUN pip3 install -r requirements.txt
 #outside container—>Inside the container
-# . means every thing the current directory
+#. means every thing the current directory
 #first period ./backend-flask(outside the container
 #sedcond period ./backend-flask (inside the container)
 COPY . .
@@ -33,4 +38,20 @@ ENV FLASK_ENV=development
 EXPOSE ${PORT}
 #command
 #this is the command to run the flaskpython3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
+
+## build container
+
+docker build -t  backend-flask ./backend-flask
+# open the port
+# add shell to docker 
+
+## Run container using this command
+docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask
+
+
+## list the container images
+docker images
+
+
+
 

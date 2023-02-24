@@ -45,32 +45,44 @@ docker build -t  backend-flask ./backend-flask
 # open the port
 # add shell to docker 
 
-## Run container using this command
+# Run container using this command
+
 docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask
 
 
-## list the container images
+# list the container images
+
 docker images
 
 # # contenarized frond-end
-# cd to the front end directory.
-installed npm using npm i command
+ cd to the front end directory.
+installed npm using npm i command 
 there also created docker file
+
 FROM node:16.18
 
 ENV PORT=3000
 
 COPY . /frontend-react-js
+
 WORKDIR /frontend-react-js
+
 RUN npm install
+
 EXPOSE ${PORT}
+
 CMD ["npm", "start"]
 
+
 # build container using this command
- # docker build -t frontend-react-js ./frontend-react-js
-# after created the decompose file file in the root folder using docker-compose.yml using th exact name otherwise it will give error
+
+  docker build -t frontend-react-js ./frontend-react-js
+  
+after created the decompose file file in the root folder using docker-compose.yml using th exact name otherwise it will give error
+
 # docker-compose.yml
-#version: "3.8"
+```
+version: "3.8"
 services:
   backend-flask:
     environment:
@@ -90,7 +102,7 @@ services:
     volumes:
       - ./frontend-react-js:/frontend-react-js
 
-
+```
 
 
 

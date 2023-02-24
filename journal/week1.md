@@ -15,7 +15,7 @@ cd ..
 ## Added docker file in backend flask
 
 Create a file here: backend-flask/Dockerfile
-
+```
 FROM python:3.10-slim-buster
 #inside the container
 WORKDIR /backend-flask
@@ -38,7 +38,7 @@ ENV FLASK_ENV=development
 EXPOSE ${PORT}
 #command
 #this is the command to run the flaskpython3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
-
+```
 ## build container
 
 docker build -t  backend-flask ./backend-flask

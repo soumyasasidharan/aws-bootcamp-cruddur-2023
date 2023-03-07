@@ -41,13 +41,13 @@ EXPOSE ${PORT}
 ```
 ## build container
 
-docker build -t  backend-flask ./backend-flask
-# open the port
-# add shell to docker 
+```docker build -t  backend-flask ./backend-flask ```
+  open the port
+  add shell to docker 
 
 # Run container using this command
 
-docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask
+```docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask ```
 
 
 # list the container images

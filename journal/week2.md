@@ -1,12 +1,14 @@
 # Week 2 — Distributed Tracing
 Distrbuted Tracing with Honeycomb
 created trail account on Honeycomb
+
 #Added honeycomb api key
 
-``
+```
 $ gp env HONEYCOMB_API_KEY="<API Key>"
 HONEYCOMB_API_KEY="<API Key>"
 ```
+
 #Folliwing code block added to requirements.txt
 
 ```
@@ -17,6 +19,7 @@ opentelemetry-instrumentation-flask
 opentelemetry-instrumentation-requests
 ```
 #Added OTEL key to the dockercomposefile.
+
 ```
 version: "3.8"
 services:

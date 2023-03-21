@@ -6,7 +6,7 @@ created trail account on Honeycomb
 $ gp env HONEYCOMB_API_KEY="<API Key>"
 HONEYCOMB_API_KEY="<API Key>"
 ```
-##Folliwing code block added to requirements.txt
+#Folliwing code block added to requirements.txt
 ```
 opentelemetry-api 
 opentelemetry-sdk 
@@ -54,7 +54,7 @@ app = Flask(__name__)
 FlaskInstrumentor().instrument_app(app)
 RequestsInstrumentor().instrument()
 ```
-#honeucomb image traces
+#honeycomb image traces
 
 #Try to get tracing with AWS xray
 ``
